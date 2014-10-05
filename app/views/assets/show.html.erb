@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asset tag:</strong>
+  <%= @asset.asset_tag %>
+</p>
+
+<p>
+  <strong>Asset name:</strong>
+  <%= @asset.asset_name %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @asset.serial_number %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @asset.purchase_date %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @asset.cost %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @asset.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @asset.notes %>
+</p>
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>
