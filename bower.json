@@ -1,0 +1,21 @@
+{
+  "name": "collie",
+  "version": "0.0.0",
+  "homepage": "https://github.com/WMTU/collie",
+  "authors": [
+    "Neil Betham <nbetham@me.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.8.3",
+    "pickadate": "~3.5.4"
+  }
+}

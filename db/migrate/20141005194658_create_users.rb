@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :org
       t.string :password_digest
-      t.string :tech_id
+      t.string :external_id
       t.boolean :active
 
       t.timestamps
