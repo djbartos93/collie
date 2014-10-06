@@ -21,19 +21,23 @@
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
   </div>
   <div class="field">
     <%= f.label :org %><br>
     <%= f.text_field :org %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.label :external_id %><br>
+    <%= f.text_field :external_id %>
   </div>
   <div class="field">
-    <%= f.label :tech_id %><br>
-    <%= f.text_field :tech_id %>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :active %><br>

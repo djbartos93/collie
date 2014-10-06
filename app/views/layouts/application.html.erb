@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div class="flex" id="nav-bar">
+      <div class="spacer"></div>
+      <a href="/">Collie</a>
+      <div class="spacer"></div>
+      <a href="/assets">Assets</a>
+      <div class="spacer"></div>
+      <a href="/users">Users</a>
+      <div class="spacer"></div>
+    </div>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
 
-<%= yield %>
-
+  </footer>
 </body>
 </html>

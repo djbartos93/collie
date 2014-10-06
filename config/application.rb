@@ -20,5 +20,8 @@ module Collie
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    # Server sprocket assets at a different url
+    config.assets.prefix = "/static/assets"
   end
 end
