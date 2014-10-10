@@ -16,15 +16,20 @@
  */
 
 @font-face {
-    font-family: 'avenir';
-    src: url(font-path('Avenir-Book.ttf'))  format('truetype');
+    font-family: 'SourceSansPro-Regular';
+    src: url(font-path('SourceSansPro-Regular.ttf'))  format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url(font-path('SourceSansPro-Light.ttf'))  format('truetype');
 }
 
 body {
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: SourceSansPro-Light, helvetica, arial, sans-serif;
   text-align: center;
-  margin-right: 0;
-  margin-left: 0;
+  margin-right: 1em;
+  margin-left: 1em;
   margin-bottom: 0;
 }
 
@@ -55,4 +60,27 @@ body {
 
 table {
   margin: 1em auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+
+  &:visited {
+    color: #000000;
+  }
+
+  &:hover {
+    color: #0074D9;
+  }
+}
+
+.nav {
+  a {
+    font-size: 1.3em;
+
+    &.brand {
+      font-size: 2em;
+    }
+  }
 }
