@@ -29,14 +29,15 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 
+
     if user.role == "admin"
       can :manage, :all
-    elsif user.role = "manager"
-      can [:create, :read, :update], [User, Asset, Rental]
+    elsif user.role == "manager"
+      can [:index, :show, :new, :edit, :create, :update], [User, Asset, Rental]
       can [:checkin, :checkout], Asset
-    elsif user.role = "renter"
-      can [:read, :update, :destroy], User, :user => { :id => user.id }
-      can [:create, :read], Rental, :rental => { :user_id => user.id}
+    elsif user.role == "renter"
+      can [:show, :edit, :update, :destroy], User, :id => user.id
+      can [:show, :create], Rental, :user_id => user.id
       can :read, Asset
     end
   end

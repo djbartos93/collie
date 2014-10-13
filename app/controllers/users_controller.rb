@@ -6,33 +6,34 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    authorize! :index, User
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
     end
-    authorize! :index, User
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    authorize! :show, @user
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
-    authorize! :read, @user
   end
 
   # GET /users/new
   def new
     @user = User.new
-    authorize! :create, User
+    authorize! :new, User
   end
 
   # GET /users/1/edit
   def edit
-    authorize! :update, @user
+    authorize! :edit, @user
   end
 
   # POST /users
@@ -40,6 +41,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     authorize! :create, User
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -55,6 +57,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     authorize! :update, @user
+
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -70,6 +73,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     authorize! :destroy, @user
+
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url }
@@ -85,6 +89,10 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :org, :external_id, :password, :password_confirmation)
+      if can? :manage, @user
+        params.require(:user).permit(:first_name, :last_name, :email, :org, :external_id, :password, :active, :role, :password_confirmation)
+      else
+        params.require(:user).permit(:first_name, :last_name, :email, :org, :external_id, :password, :password_confirmation)
+      end
     end
 end

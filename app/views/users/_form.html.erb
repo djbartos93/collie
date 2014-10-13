@@ -28,16 +28,17 @@
     <%= f.text_field :org %>
   </div>
   <div class="field">
-    <%= f.label :external_id %><br>
-    <%= f.text_field :external_id %>
-  </div>
-  <div class="field">
     <%= f.label :password %><br>
     <%= f.password_field :password %>
   </div>
   <div class="field">
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
+  </div>
+  <% if can? :manage, User %>
+  <div class="field">
+    <%= f.label :external_id %><br>
+    <%= f.text_field :external_id %>
   </div>
   <div class="field">
     <%= f.label :active %><br>
@@ -47,6 +48,7 @@
     <%= f.label :role %><br>
     <%= f.collection_select :role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize} %>
   </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

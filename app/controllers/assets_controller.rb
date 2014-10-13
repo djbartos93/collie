@@ -5,6 +5,7 @@ class AssetsController < ApplicationController
   # GET /assets.json
   def index
     @assets = Asset.all
+    authorize! :index, Asset
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,6 +16,8 @@ class AssetsController < ApplicationController
   # GET /assets/1
   # GET /assets/1.json
   def show
+    authorize! :show, @asset
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @asset }
@@ -23,17 +26,21 @@ class AssetsController < ApplicationController
 
   # GET /assets/new
   def new
+    authorize! :new, Asset
+
     @asset = Asset.new
   end
 
   # GET /assets/1/edit
   def edit
+    authorize! :edit, @asset
   end
 
   # POST /assets
   # POST /assets.json
   def create
     @asset = Asset.new(asset_params)
+    authorize! :create, @asset
 
     respond_to do |format|
       if @asset.save
@@ -49,6 +56,8 @@ class AssetsController < ApplicationController
   # PATCH/PUT /assets/1
   # PATCH/PUT /assets/1.json
   def update
+    authorize! :update, @asset
+
     respond_to do |format|
       if @asset.update(asset_params)
         format.html { redirect_to @asset, notice: 'Asset was successfully updated.' }
@@ -63,6 +72,8 @@ class AssetsController < ApplicationController
   # DELETE /assets/1
   # DELETE /assets/1.json
   def destroy
+    authorize! :destroy, @asset
+    
     @asset.destroy
     respond_to do |format|
       format.html { redirect_to assets_url }
