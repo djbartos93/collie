@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 	Raleway, helvetica, arial, sans-serif;
+  font-family: 	MuseoSans, helvetica, arial, sans-serif;
   text-align: center;
   margin-right: 1em;
   margin-left: 1em;
@@ -93,6 +93,7 @@ a {
     font-size: 1.3em;
 
     &.brand {
+      font-family: MuseoSansItalic, helvetica, arial, sans-serif;
       font-size: 2em;
     }
   }

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'MuseoSans';
+    src: url(font-path('MuseoSans500.ttf')) format('truetype'),
+         url(font-path('MuseoSans500.eot')) format('embedded-opentype'),
+         url(font-path('MuseoSans500.woff')) format('woff');
+}
+
+@font-face {
+    font-family: 'MuseoSansItalic';
+    src: url(font-path('MuseoSansItalic500.ttf')) format('truetype'),
+         url(font-path('MuseoSansItalic500.eot')) format('embedded-opentype'),
+         url(font-path('MuseoSansItalic500.woff')) format('woff');
+}
