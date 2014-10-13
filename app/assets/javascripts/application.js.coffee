@@ -14,4 +14,12 @@
 #= require jquery_ujs
 #= require_tree ../../../vendor/assets/javascripts/
 #= require turbolinks
+#= require nprogress
+#= require nprogress-turbolinks
 #= require_tree .
+
+NProgress.configure({
+  showSpinner: false,
+  ease: 'ease',
+  speed: 500
+});

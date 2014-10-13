@@ -7,7 +7,7 @@ class CreateAssets < ActiveRecord::Migration
       t.date :purchase_date
       t.float :cost
       t.string :status
-      t.string :notes
+      t.text :notes
 
       t.timestamps
     end

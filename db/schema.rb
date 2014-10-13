@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141013035430) do
     t.date     "purchase_date"
     t.float    "cost"
     t.string   "status"
-    t.string   "notes"
+    t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

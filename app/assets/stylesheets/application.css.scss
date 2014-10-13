@@ -15,6 +15,11 @@
  *= require_self
  */
 
+/* Progess bar for turbolinks */
+$nprogress-color: #33db9b;
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -84,7 +89,7 @@ a {
   }
 
   &:hover {
-    color: #0074D9;
+    color: #33db9b;
   }
 }
 
