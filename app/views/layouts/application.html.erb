@@ -17,7 +17,7 @@
       <div class="spacer"></div>
       <%= link_to 'Users', users_path %>
       <div class="spacer"></div>
-      <%= link_to 'Logout', session_path(1), method: :delete %>
+      <span><%= link_to current_user.first_name, edit_user_path(current_user) %>, <%= link_to 'Logout', session_path(1), method: :delete %></span>
       <div class="spacer"></div>
       <% end %>
     </div>
