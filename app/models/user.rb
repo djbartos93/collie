@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
 
   private
     def set_role
-      self.role = 'renter'
+      self.role = 'renter' unless self.role
     end
 end
