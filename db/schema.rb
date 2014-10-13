@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005234906) do
+ActiveRecord::Schema.define(version: 20141013035430) do
 
   create_table "assets", force: true do |t|
     t.string   "asset_tag"
@@ -92,9 +92,10 @@ ActiveRecord::Schema.define(version: 20141005234906) do
     t.string   "org"
     t.string   "password_digest"
     t.string   "external_id"
-    t.boolean  "active"
+    t.boolean  "active",          default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
   end
 
 end

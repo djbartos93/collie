@@ -1,0 +1,14 @@
+<%= form_tag sessions_path do %>
+  <h2 class="form-signin-header">Login</h2>
+  <%= text_field_tag :email, params[:email], :placeholder => "Email" %>
+  <%= password_field_tag :password, params[:password], :placeholder => "Password" %>
+  <%= submit_tag "Log In" %>
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <div class="form-signin">
+    <% if msg.is_a?(String) %>
+      <%= content_tag :div, msg, :class => "alert alert-#{name}" %>
+    <% end %>
+  </div>
+<% end %>

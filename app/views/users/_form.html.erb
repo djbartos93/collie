@@ -43,6 +43,10 @@
     <%= f.label :active %><br>
     <%= f.check_box :active %>
   </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.collection_select :role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

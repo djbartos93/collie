@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :org
       t.string :password_digest
       t.string :external_id
-      t.boolean :active
+      t.boolean :active, :default => true
 
       t.timestamps
     end
