@@ -117,6 +117,7 @@ input[type="text"], input[type="password"], input[type="email"] {
   border: solid 2px rgba(0,0,0,0);
   font-size: 12px;
   outline: none;
+  border-radius: .3em;
 
   &:hover {
     border: solid 2px #33db9b;
