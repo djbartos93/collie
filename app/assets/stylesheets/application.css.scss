@@ -23,6 +23,7 @@ $nprogress-color: #33db9b;
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
+  font-weight: 300;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
 
 * {
   font-family: inherit;
+  font-weight: inherit;
 }
 
 .flex {
@@ -100,6 +102,7 @@ a {
     &.brand {
       font-family: MuseoSansItalic, helvetica, arial, sans-serif;
       font-size: 2em;
+      font-weight: 500;
     }
   }
 }
@@ -119,11 +122,26 @@ input[type="text"], input[type="password"], input[type="email"] {
   outline: none;
   border-radius: .3em;
 
+  -webkit-transition: border 1.5s;
+  -moz-transition: border 1.5s;
+  -ms-transition: border 1.5s;
+  -o-transition: border 1.5s;
+  transition: border 1.5s;
+
   &:hover {
     border: solid 2px #33db9b;
+    -webkit-transition: border 0s;
+    -moz-transition: border 0s;
+    -ms-transition: border 0s;
+    -o-transition: border 0s;
+    transition: border 0s;
   }
 
   &:focus {
     border: solid 2px rgba(0,0,0,0);
   }
+}
+
+.field {
+  margin: .5em auto;
 }

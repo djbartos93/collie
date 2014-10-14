@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :asset_tag %><br>
-    <%= f.text_field :asset_tag %>
+    <%= f.text_field :asset_tag, placeholder: 'Asset Tag' %>
   </div>
   <div class="field">
     <%= f.label :asset_name %><br>
-    <%= f.text_field :asset_name %>
+    <%= f.text_field :asset_name, placeholder: 'Asset Name' %>
   </div>
   <div class="field">
     <%= f.label :serial_number %><br>
-    <%= f.text_field :serial_number %>
+    <%= f.text_field :serial_number, placeholder: 'Serial Number' %>
   </div>
   <div class="field">
     <%= f.label :purchase_date %><br>
@@ -29,15 +29,15 @@
   </div>
   <div class="field">
     <%= f.label :cost %><br>
-    <%= f.text_field :cost %>
+    <%= f.text_field :cost, placeholder: '0.0' %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.text_field :status, placeholder: 'Status' %>
   </div>
   <div class="field">
     <%= f.label :notes %><br>
-    <%= f.text_field :notes %>
+    <%= f.text_field :notes, placeholder: 'Notes' %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn--s btn--gray' %>
