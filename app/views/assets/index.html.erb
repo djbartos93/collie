@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Asset tag</th>
-      <th>Asset name</th>
-      <th>Serial number</th>
-      <th>Purchase date</th>
+      <th>Asset Tag</th>
+      <th>Asset Name</th>
+      <th>Serial Number</th>
+      <th>Purchase Date</th>
       <th>Cost</th>
       <th>Status</th>
       <th>Notes</th>
@@ -29,5 +29,6 @@
 </table>
 
 <br>
-
+<% if can? :create, Asset %>
 <%= link_to 'New Asset', new_asset_path, class: 'btn btn--s btn--gray' %>
+<% end %>

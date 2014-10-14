@@ -1,13 +1,19 @@
 input[type="text"], input[type="password"], input[type="email"] {
   display: block;
+
   height: 2.5em;
   min-width: 20em;
+
   margin: 1em auto;
   padding: .5em;
+
   border: solid 2px rgba(0,0,0,0);
-  font-size: 12px;
   outline: none;
   border-radius: .3em;
+
+  font-size: 12px;
+
+  background-color: rgba(0,0,0,.1);
 
   -webkit-transition: border 1.5s;
   -moz-transition: border 1.5s;
@@ -22,9 +28,5 @@ input[type="text"], input[type="password"], input[type="email"] {
     -ms-transition: border 0s;
     -o-transition: border 0s;
     transition: border 0s;
-  }
-
-  &:focus {
-    border: solid 2px rgba(0,0,0,0);
   }
 }
