@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event Title:</strong>
+  <%= @rental.event_title %>
+</p>
+
+<p>
+  <strong>Event Location:</strong>
+  <%= @rental.event_location %>
+</p>
+
+<p>
+  <strong>Event Description:</strong>
+  <%= @rental.event_description %>
+</p>
+
+<p>
+  <strong>Event Date:</strong>
+  <%= @rental.event_date %>
+</p>
+
+<p>
+  <strong>Setup Help</strong>
+  <%= @rental.setup_help %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental), class: 'btn btn--s btn--gray' %> |
+<%= link_to 'Back', rentals_path, class: 'btn btn--s btn--gray' %>

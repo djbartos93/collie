@@ -1,0 +1,30 @@
+<h1>Listing Rentals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Title</th>
+      <th>Eevnt Location</th>
+      <th>Event Description</th>
+      <th>Event Date</th>
+      <th>Setup Help</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rentals.each do |rental| %>
+      <tr>
+        <td><%= link_to rental.asset_tag, rental_path(rental) %></td>
+        <td><%= link_to rental.asset_name, rental_path(rental) %></td>
+        <td><%= truncate(rental.event_desription) %></td>
+        <td><%= rental.event_date %></td>
+        <td><%= rental.setup_help %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if can? :create, Rental %>
+<%= link_to 'New Rental', new_rental_path, class: 'btn btn--s btn--gray' %>
+<% end %>
