@@ -1,0 +1,21 @@
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+
+  th {
+    border-bottom: 2px solid #cccccc;
+  }
+
+  td {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  tbody > tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    padding: 1em;
+  }
+}

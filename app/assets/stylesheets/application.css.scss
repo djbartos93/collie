@@ -39,49 +39,6 @@ body {
   font-weight: inherit;
 }
 
-.flex {
-  display: -webkit-flex;
-  display: flex;
-
-  flex-flow: row;
-  -webkit-flex-flow: row;
-
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-
-  align-items: center;
-  -webkit-align-items: center;
-
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-
-  .spacer {
-    margin: auto;
-  }
-}
-
-table {
-  margin: 1em auto;
-  border-collapse: collapse;
-
-  th {
-    border-bottom: 2px solid #cccccc;
-  }
-
-  td {
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-  }
-
-  tbody > tr:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  th, td {
-    padding: 1em;
-  }
-}
-
 a {
   text-decoration: none;
   color: #000000;
@@ -111,36 +68,6 @@ a {
   margin: 1em auto;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
-  display: block;
-  height: 2.5em;
-  min-width: 20em;
-  margin: 1em auto;
-  padding: .5em;
-  border: solid 2px rgba(0,0,0,0);
-  font-size: 12px;
-  outline: none;
-  border-radius: .3em;
-
-  -webkit-transition: border 1.5s;
-  -moz-transition: border 1.5s;
-  -ms-transition: border 1.5s;
-  -o-transition: border 1.5s;
-  transition: border 1.5s;
-
-  &:hover {
-    border: solid 2px #33db9b;
-    -webkit-transition: border 0s;
-    -moz-transition: border 0s;
-    -ms-transition: border 0s;
-    -o-transition: border 0s;
-    transition: border 0s;
-  }
-
-  &:focus {
-    border: solid 2px rgba(0,0,0,0);
-  }
-}
 
 .field {
   margin: .5em auto;
