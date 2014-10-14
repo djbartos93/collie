@@ -107,3 +107,22 @@ a {
 #notifications {
   margin: 1em auto;
 }
+
+input[type="text"], input[type="password"], input[type="email"] {
+  display: block;
+  height: 2.5em;
+  min-width: 20em;
+  margin: 1em auto;
+  padding: .5em;
+  border: solid 2px rgba(0,0,0,0);
+  font-size: 12px;
+  outline: none;
+
+  &:hover {
+    border: solid 2px #33db9b;
+  }
+
+  &:focus {
+    border: solid 2px rgba(0,0,0,0);
+  }
+}

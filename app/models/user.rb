@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   validates :email, :org, :role, presence: true
   validates :email, uniqueness: true
+  validates :email, format: { with: /@/ }
 
   private
     def set_role

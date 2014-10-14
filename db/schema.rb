@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013035430) do
+ActiveRecord::Schema.define(version: 20141014002304) do
 
   create_table "assets", force: true do |t|
     t.string   "asset_tag"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141013035430) do
     t.date     "purchase_date"
     t.float    "cost"
     t.string   "status"
-    t.text     "notes"
+    t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -66,6 +66,11 @@ ActiveRecord::Schema.define(version: 20141013035430) do
     t.datetime "checkin_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "event_title"
+    t.string   "event_location"
+    t.string   "event_description"
+    t.date     "event_date"
+    t.boolean  "setup_help"
   end
 
   add_index "rentals", ["user_id"], name: "index_rentals_on_user_id"
@@ -96,6 +101,8 @@ ActiveRecord::Schema.define(version: 20141013035430) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "role"
+    t.boolean  "confirmed"
+    t.string   "confirm_key"
   end
 
 end

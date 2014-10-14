@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 
     # Check if session is authed
     def authenticate
-      redirect_to new_session_url, danger: "Please Login" unless current_user && current_user.active
+      redirect_to new_session_url, danger: "Please Login" unless current_user && current_user.active && current_user.confirmed
     end
 
     def current_ability
