@@ -29,7 +29,8 @@
     <% end %>
   </tbody>
 </table>
-
+<br>
+<%= paginate @users %>
 <br>
 
 <%= link_to 'New User', new_user_path, class: 'btn btn--s btn--gray' %>
