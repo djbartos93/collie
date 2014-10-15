@@ -16,4 +16,3 @@ Asset / Rental Management
   - [ ] Add requested equipment vs rented
   - [ ] Require manager to signin to complete a rental
   - [ ] lookup rental -> scan equipment -> manager sign off (native app)
-  - [ ]
