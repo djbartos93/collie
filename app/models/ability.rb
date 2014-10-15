@@ -6,7 +6,8 @@ class Ability
       if user.role == "admin"
         can :manage, :all
       elsif user.role == "manager"
-        can [:index, :show, :new, :edit, :create, :update], [User, Asset, Rental]
+        can [:index, :show], Asset
+        can [:index, :show, :new, :edit, :create, :update], [User, Rental]
         can [:checkin, :checkout], Asset
       elsif user.role == "renter"
         can [:show, :edit, :update, :destroy], User, :id => user.id
