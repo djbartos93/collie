@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014002304) do
+ActiveRecord::Schema.define(version: 20141015020509) do
 
   create_table "assets", force: true do |t|
     t.string   "asset_tag"
@@ -23,7 +23,10 @@ ActiveRecord::Schema.define(version: 20141014002304) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "type_id"
   end
+
+  add_index "assets", ["type_id"], name: "index_assets_on_type_id"
 
   create_table "assets_rentals", force: true do |t|
     t.integer  "asset_id"
@@ -71,6 +74,7 @@ ActiveRecord::Schema.define(version: 20141014002304) do
     t.string   "event_description"
     t.date     "event_date"
     t.boolean  "setup_help"
+    t.text     "equipment_needed"
   end
 
   add_index "rentals", ["user_id"], name: "index_rentals_on_user_id"
@@ -89,6 +93,12 @@ ActiveRecord::Schema.define(version: 20141014002304) do
   end
 
   add_index "tokens", ["user_id"], name: "index_tokens_on_user_id"
+
+  create_table "types", force: true do |t|
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "first_name"
