@@ -27,7 +27,8 @@
     <% end %>
   </tbody>
 </table>
-
+<br>
+<%= paginate @assets %>
 <br>
 <% if can? :create, Asset %>
 <%= link_to 'New Asset', new_asset_path, class: 'btn btn--s btn--gray' %>

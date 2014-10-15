@@ -4,7 +4,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.all
+    @assets = Asset.all.page params[:page]
     authorize! :index, Asset
 
     respond_to do |format|
@@ -73,7 +73,7 @@ class AssetsController < ApplicationController
   # DELETE /assets/1.json
   def destroy
     authorize! :destroy, @asset
-    
+
     @asset.destroy
     respond_to do |format|
       format.html { redirect_to assets_url }

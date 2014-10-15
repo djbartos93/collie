@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all.page params[:page]
     authorize! :index, User
 
     respond_to do |format|
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     authorize! :show, @user
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
