@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate, only: [:new, :create]
+  layout "login"
 
   # GET /sessions/new
   def new
+
   end
 
   # POST /sessions
