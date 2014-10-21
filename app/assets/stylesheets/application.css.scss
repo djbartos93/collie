@@ -24,14 +24,15 @@ html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   font-weight: 300;
+  font-family: 	MuseoSans, helvetica, arial, sans-serif;
+
+  height: 100%;
 }
 
 body {
-  font-family: 	MuseoSans, helvetica, arial, sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
-  margin-top: 50px;
+  height: 100%;
 }
 
 * {
@@ -74,24 +75,72 @@ a {
 }
 
 #header-sidebar, #sidebar {
-  width: 15%;
-  background-color: #555555;
+  width: 19%;
+  background-color: rgba(40, 42, 50, 1);
+}
+
+#sidebar {
+  background-color: rgba(33, 35, 41, 1);
+}
+
+#header-main, #main {
+  width: 81%;
+}
+
+#header-main {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#main {
+  background-color: rgba(229, 232, 235, 1);
 }
 
 header {
   top: 0;
+
   position: fixed;
+
   display: block;
+
   width: 100%;
-  height: 50px;
+  height: 60px;
 
   section {
-    position: relative;
     display: inline-block;
+    height: 100%;
+    float: left;
+  }
+}
+
+main {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  section {
+    display: inline-block;
+
+    height: 100%;
+
+    float: left;
+
+    padding-top: 60px;
+  }
+
+  #sidebar {
+    position: fixed;
+
+    top: 60px;
+
     height: 100%;
   }
 
-  #header-main {
-    width: 85%;
+  #main {
+    margin-left: 19%;
+  }
+
+  #main-container {
+    margin: 1em;
   }
 }
