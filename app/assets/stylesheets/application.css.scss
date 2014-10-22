@@ -14,12 +14,17 @@
  *= require_tree .
  *= require_self
  */
+/* UI Constants */
+$navbar-height: 60px;
+$sidebar-width: 19%;
+$brand-color: #33db9b;
 
 /* Progess bar for turbolinks */
-$nprogress-color: #33db9b;
+$nprogress-color: $brand-color;
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 
+/* General app styles */
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -49,7 +54,7 @@ a {
   }
 
   &:hover {
-    color: #33db9b;
+    color: $brand-color;
   }
 }
 
@@ -75,8 +80,16 @@ a {
 }
 
 #header-sidebar, #sidebar {
-  width: 19%;
+  width: $sidebar-width;
   background-color: rgba(40, 42, 50, 1);
+
+  a {
+    color: #FFFFFF;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
 }
 
 #sidebar {
@@ -84,7 +97,7 @@ a {
 }
 
 #header-main, #main {
-  width: 81%;
+  width: 100% - $sidebar-width;
 }
 
 #header-main {
@@ -103,7 +116,7 @@ header {
   display: block;
 
   width: 100%;
-  height: 60px;
+  height: $navbar-height;
 
   section {
     display: inline-block;
@@ -125,19 +138,19 @@ main {
 
     float: left;
 
-    padding-top: 60px;
+    padding-top: $navbar-height;
   }
 
   #sidebar {
     position: fixed;
 
-    top: 60px;
+    top: $navbar-height;
 
     height: 100%;
   }
 
   #main {
-    margin-left: 19%;
+    margin-left: $sidebar-width;
   }
 
   #main-container {
