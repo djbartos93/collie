@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   ROLES = %i(admin manager renter)
   has_secure_password
 
-  before_validation :set_role, :generate_confirm_key
+  before_create :set_role, :generate_confirm_key
 
   validates :email, :org, :role, presence: true
   validates :email, uniqueness: true
@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
     def generate_confirm_key
       begin
         self.confirm_key = SecureRandom.hex
-      end while self.class.exists?(token: token)
+      end while self.class.exists?(confirm_key: confirm_key)
     end
 end

@@ -16,7 +16,7 @@
   <tbody>
     <% @assets.each do |asset| %>
       <tr>
-        <td><%= link_to asset.asset_tag, asset_path(asset) %></td>
+        <td><%= link_to asset.current_tag.tag_number, asset_path(asset) %></td>
         <td><%= link_to asset.asset_name, asset_path(asset) %></td>
         <td><%= link_to asset.serial_number, asset_path(asset) %></td>
         <td><%= asset.purchase_date %></td>

@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141015020509) do
+ActiveRecord::Schema.define(version: 20141026004523) do
+
+  create_table "asset_tags", force: true do |t|
+    t.string   "tag_number"
+    t.integer  "asset_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "asset_tags", ["asset_id"], name: "index_asset_tags_on_asset_id"
 
   create_table "assets", force: true do |t|
-    t.string   "asset_tag"
     t.string   "asset_name"
     t.string   "serial_number"
     t.date     "purchase_date"

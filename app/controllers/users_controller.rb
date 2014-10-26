@@ -29,6 +29,10 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     authorize! :new, User
+    
+    if !can? :manage, User
+      render 'new', layout: 'login'
+    end
   end
 
   # GET /users/1/edit

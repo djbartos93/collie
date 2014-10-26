@@ -1,7 +1,6 @@
 class CreateAssets < ActiveRecord::Migration
   def change
     create_table :assets do |t|
-      t.string :asset_tag
       t.string :asset_name
       t.string :serial_number
       t.date :purchase_date

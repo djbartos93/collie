@@ -5,7 +5,7 @@ Asset / Rental Management
 
 # TODO
 - Assets
-  - [ ] Generate random asset tag
+  - [x] Generate random asset tag
   - [ ] Public view of rentable assets
   - [ ] CSV dump of asset database
 - Users

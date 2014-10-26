@@ -66,3 +66,6 @@ gem 'nokogiri', '~> 1.6.2.1'
 
 # Pagination
 gem 'kaminari', '~> 0.16.1'
+
+# RabbitMQ
+gem 'bunny', '~> 1.5.1'
