@@ -1,3 +1,99 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+#header-sidebar, #sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-header-color;
+
+  a {
+    color: #FFFFFF;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+#header-sidebar {
+  text-align: center;
+
+  div {
+    height: 100%;
+    width: 100%;
+
+    display: table;
+
+    a {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+#sidebar {
+  background-color: $sidebar-color;
+}
+
+#header-main, #main {
+  width: 100% - $sidebar-width;
+}
+
+#header-main {
+  background-color: $main-header-color;
+}
+
+#main {
+  background-color: $main-color;
+}
+
+header {
+  top: 0;
+
+  position: fixed;
+
+  display: block;
+
+  width: 100%;
+  height: $navbar-height;
+
+  section {
+    display: inline-block;
+    height: 100%;
+    float: left;
+  }
+}
+
+main {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  #main {
+    display: inline-block;
+
+    height: 100%;
+
+    float: left;
+
+    padding-top: $navbar-height;
+  }
+
+  #sidebar {
+    position: fixed;
+
+    top: $navbar-height;
+
+    height: 100%;
+  }
+
+  #main {
+    margin-left: $sidebar-width;
+  }
+
+  #main-container {
+    margin: 1em;
+  }
+}

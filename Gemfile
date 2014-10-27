@@ -69,3 +69,6 @@ gem 'kaminari', '~> 0.16.1'
 
 # RabbitMQ
 gem 'bunny', '~> 1.5.1'
+
+# User Profile images from Gravatar
+gem 'gravatarify', '~> 3.1.1'

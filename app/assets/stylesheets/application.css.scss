@@ -14,14 +14,11 @@
  *= require_tree .
  *= require_self
  */
+@import "variables";
+
 /* Font Awesome */
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-/* UI Constants */
-$navbar-height: 60px;
-$sidebar-width: 19%;
-$brand-color: #33db9b;
 
 /* Progess bar for turbolinks */
 $nprogress-color: $brand-color;
@@ -83,99 +80,4 @@ a {
 
 .field {
   margin: .5em auto;
-}
-
-#header-sidebar, #sidebar {
-  width: $sidebar-width;
-  background-color: rgba(40, 42, 50, 1);
-
-  a {
-    color: #FFFFFF;
-
-    &:hover {
-      color: $brand-color;
-    }
-  }
-}
-
-#header-sidebar {
-  text-align: center;
-
-  div {
-    height: 100%;
-    width: 100%;
-
-    display: table;
-
-    a {
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-}
-
-#sidebar {
-  background-color: rgba(33, 35, 41, 1);
-}
-
-#header-main, #main {
-  width: 100% - $sidebar-width;
-}
-
-#header-main {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-#main {
-  background-color: rgba(229, 232, 235, 1);
-}
-
-header {
-  top: 0;
-
-  position: fixed;
-
-  display: block;
-
-  width: 100%;
-  height: $navbar-height;
-
-  section {
-    display: inline-block;
-    height: 100%;
-    float: left;
-  }
-}
-
-main {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  #main {
-    display: inline-block;
-
-    height: 100%;
-
-    float: left;
-
-    padding-top: $navbar-height;
-  }
-
-  #sidebar {
-    position: fixed;
-
-    top: $navbar-height;
-
-    height: 100%;
-  }
-
-  #main {
-    margin-left: $sidebar-width;
-  }
-
-  #main-container {
-    margin: 1em;
-  }
 }
