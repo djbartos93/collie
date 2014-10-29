@@ -1,6 +1,16 @@
 <div id="user_header">
-  <span>
-
-    <%= link_to "Yo, "+current_user.first_name, current_user %>
-  </span>
+  <div id="user_header_container">
+    <div id="user_header_container_content">
+      <span id="user_header_contrainer_span">
+        <div>
+          <%= link_to "Yo, "+current_user.first_name, current_user %>
+        </div>
+        <div>
+          <a id="user_menu">
+            <%= gravatar_tag current_user.email, :size => 30, :html => { :class => "gravatar" } %>
+          </a>
+        </div>
+      </span>
+    </div>
+  </div>
 </div>
