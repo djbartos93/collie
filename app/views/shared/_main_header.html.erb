@@ -1,0 +1,19 @@
+<div id="header-container">
+  <span id="search_field">
+    <input type="text" name="search" value="" placeholder="Search">
+  </span>
+  <span id="user_info">
+    <span>
+      Yo, <%= link_to current_user.first_name, current_user %>
+    </span>
+    <span id="user_menu">
+      <a>
+        <%= gravatar_tag current_user.email, :size => 30, :html => { :class => "gravatar" } %>
+      </a>
+      <ul>
+        <li><%= link_to 'Logout', session_path(1), method: :delete %></li>
+        <li><%= link_to 'Edit Account', edit_user_path(current_user) %></li>
+      </ul>
+    </span>
+  </span>
+</div>

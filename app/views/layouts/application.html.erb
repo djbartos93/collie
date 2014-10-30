@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="nav">
+  <header>
     <section id="header-sidebar">
       <div>
         <%= link_to 'Collie', root_path, class: 'brand' %>
@@ -15,7 +15,7 @@
     </section>
     <section id="header-main">
       <% if current_user %>
-        <%= render "shared/user_header" %>
+        <%= render "shared/main_header" %>
       <% end %>
     </section>
   </header>
