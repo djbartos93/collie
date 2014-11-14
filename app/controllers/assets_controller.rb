@@ -10,6 +10,7 @@ class AssetsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @assets }
+      format.csv { send_data @assets.to_csv, filename: "assets-#{Time.now.strftime('%Y%m%dT%H%M%S')}.csv",  type: 'application/csv'}
     end
   end
 

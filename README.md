@@ -7,7 +7,7 @@ Asset / Rental Management
 - Assets
   - [x] Generate random asset tag
   - [ ] Public view of rentable assets
-  - [ ] CSV dump of asset database
+  - [x] CSV dump of asset database
 - Users
   - [ ] Confirmation emails
   - [ ] Add contact info (phone)

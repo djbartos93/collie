@@ -7,7 +7,16 @@ class Asset < ActiveRecord::Base
   validates :serial_number, uniqueness: true
 
   def current_tag
-    self.asset_tags.all.order("created_at DESC").first
+    asset_tags.all.order("created_at DESC").first
+  end
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |asset|
+        csv << asset.attributes.values_at(*column_names)
+      end
+    end
   end
 
   private
