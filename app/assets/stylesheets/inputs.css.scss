@@ -31,3 +31,10 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     transition: border 0s;
   }
 }
+
+#login-layout {
+  input[type="text"], input[type="password"], input[type="email"], textarea {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,8 @@
+LABEL_PRINTING:
+  ENABLED: false
+  DEFAULT_ZPL: ./config/default.zpl
+  RABBIT_MQ:
+    HOST:
+    PORT:
+    USER:
+    PASS: 

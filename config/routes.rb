@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
 
   root to: "dashboard#index"
-  resources :assets, :concerns => :paginatable
+  resources :assets, :concerns => :paginatable do
+    member do
+      get 'print', to: 'assets#print_label'
+    end
+  end
   resources :users, :concerns => :paginatable
   resources :rentals, :concerns => :paginatable
   resources :sessions, only: [:new, :create, :destroy]

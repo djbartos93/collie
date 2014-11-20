@@ -6,9 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <header>
-    <div class="flex nav" id="nav-bar">
+<body id="login-layout">
+  <header id="login-header">
+    <div class="flex">
       <div class="spacer"></div>
       <%= link_to 'Collie', root_path, class: 'brand' %>
       <div class="spacer"></div>

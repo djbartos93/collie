@@ -1,5 +1,5 @@
 class AssetsController < ApplicationController
-  before_action :set_asset, only: [:show, :edit, :update, :destroy]
+  before_action :set_asset, only: [:show, :edit, :update, :destroy, :print_label]
 
   # GET /assets
   # GET /assets.json
@@ -78,6 +78,19 @@ class AssetsController < ApplicationController
     @asset.destroy
     respond_to do |format|
       format.html { redirect_to assets_url }
+      format.json { head :no_content }
+    end
+  end
+
+  # GET /assets/1/print
+  # GET /assets/1/print.json
+  def print_label
+    authorize! :update, @asset
+
+    @asset.current_tag.print_label
+
+    respond_to do |format|
+      format.html { redirect_to @asset, notice: 'Tag queued for printing' }
       format.json { head :no_content }
     end
   end
