@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     authorize! :new, User
-    
+
     if !can? :manage, User
       render 'new', layout: 'login'
     end
@@ -94,9 +94,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       if can? :manage, @user
-        params.require(:user).permit(:first_name, :last_name, :email, :org, :external_id, :password, :active, :role, :password_confirmation)
+        params.require(:user).permit(:first_name, :last_name, :email, :phone, :org, :external_id, :password, :active, :role, :password_confirmation)
       else
-        params.require(:user).permit(:first_name, :last_name, :email, :org, :external_id, :password, :password_confirmation)
+        params.require(:user).permit(:first_name, :last_name, :email, :phone, :org, :external_id, :password, :password_confirmation)
       end
     end
 end

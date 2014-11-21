@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026004523) do
+ActiveRecord::Schema.define(version: 20141121000603) do
 
   create_table "asset_tags", force: true do |t|
     t.string   "tag_number"
@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(version: 20141026004523) do
     t.string   "role"
     t.boolean  "confirmed"
     t.string   "confirm_key"
+    t.string   "phone"
   end
 
 end

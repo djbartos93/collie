@@ -6,6 +6,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
+      <th>Phone</th>
       <th>Org</th>
       <th>External ID</th>
       <th>Role</th>
@@ -20,6 +21,7 @@
         <td><%= link_to user.first_name, edit_user_path(user) %></td>
         <td><%= link_to user.last_name, edit_user_path(user) %></td>
         <td><%= link_to user.email, edit_user_path(user) %></td>
+        <td><%= link_to user.phone, edit_user_path(user) %></td>
         <td><%= user.org %></td>
         <td><%= user.external_id %></td>
         <td><%= user.role.humanize %></td>
