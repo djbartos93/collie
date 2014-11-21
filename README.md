@@ -11,7 +11,7 @@ Asset / Rental Management
   - [x] Asset tag printing
 - Users
   - [ ] Confirmation emails
-  - [ ] Add contact info (phone)
+  - [x] Add contact info (phone)
 - Rentals
   - [ ] Add approve or deny
   - [ ] Add requested equipment vs rented

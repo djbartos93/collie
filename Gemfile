@@ -72,3 +72,6 @@ gem 'bunny', '~> 1.5.1'
 
 # User Profile images from Gravatar
 gem 'gravatarify', '~> 3.1.1'
+
+# Phone number parsing
+gem 'phone', '~> 1.2.3'
