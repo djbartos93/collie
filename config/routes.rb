@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   resources :rentals, :concerns => :paginatable
   resources :sessions, only: [:new, :create, :destroy]
   get 'search/index'
-  post 'search/results'
+  get 'search/query'
+  post 'search/query'
 end

@@ -1,6 +1,5 @@
-require 'label_generator'
-
 class AssetTag < ActiveRecord::Base
+  searchkick
   belongs_to :asset
   validates :tag_number, uniqueness: true
 

@@ -75,3 +75,6 @@ gem 'gravatarify', '~> 3.1.1'
 
 # Phone number parsing
 gem 'phone', '~> 1.2.3'
+
+# global search
+gem 'searchkick', '~> 0.8.5'
