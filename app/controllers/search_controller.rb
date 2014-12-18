@@ -4,8 +4,13 @@ class SearchController < ApplicationController
 
     logger.debug "Number of records found #{@records.length}"
 
+    if @records.length == 1
+      redirect_to @records.first
+      return
+    end
+
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # query.html.erb
       format.json { render json: @records }
     end
   end
