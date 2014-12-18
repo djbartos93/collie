@@ -20,6 +20,10 @@ class Asset < ActiveRecord::Base
     end
   end
 
+  def search_data
+    attributes.merge asset_tag: current_tag.tag_number
+  end
+
   private
     def generate_asset_tag
       self.asset_tags.create

@@ -111,6 +111,11 @@ main {
   height: 100%;
   width: 100%;
 
+  form {
+    display: inline-block;
+    height: 100%;
+  }
+
   div {
     display: inline-block;
     vertical-align: middle;
@@ -222,7 +227,7 @@ main {
     background-color: #999999;
 
     li {
-      margin: .2em 0;
+      margin: .01em .1em;
     }
 
     a {
