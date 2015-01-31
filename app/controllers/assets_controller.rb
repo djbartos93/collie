@@ -95,6 +95,19 @@ class AssetsController < ApplicationController
     end
   end
 
+  # POST /assets/1/new_tag
+  # POST /assets/1/new_tag.json
+  def new_tag
+    authorize! :update, @asset
+
+    @asset.asset_tags.create!
+
+    respond_to do |format|
+      format.html { redirect_to @asset, notice: 'New tag created' }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_asset

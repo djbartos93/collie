@@ -39,3 +39,12 @@
     <%= f.submit class: 'btn btn--s btn--gray' %>
   </div>
 <% end %>
+
+<div id="asset_tags">
+  <h3>Asset Tag History</h3>
+  <ul>
+    <% @asset.asset_tags.each do |tag| %>
+      <li><span><%= tag.tag_number %></span><span>Controls go here</span></li>
+    <% end %>
+  </ul>
+</div>

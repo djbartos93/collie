@@ -1,7 +1,6 @@
 input[type="text"], input[type="password"], input[type="email"], textarea {
   display: block;
 
-  height: 2.5em;
   min-width: 20em;
 
   margin-top: 1em;
@@ -30,6 +29,10 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     -o-transition: border 0s;
     transition: border 0s;
   }
+}
+
+textarea {
+  height: none;
 }
 
 #login-layout {

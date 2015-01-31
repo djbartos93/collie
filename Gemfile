@@ -73,8 +73,8 @@ gem 'bunny', '~> 1.5.1'
 # User Profile images from Gravatar
 gem 'gravatarify', '~> 3.1.1'
 
-# Phone number parsing
-gem 'phone', '~> 1.2.3'
+# Phone number validation
+gem 'phony_rails', '~> 0.9.0'
 
 # global search
 gem 'searchkick', '~> 0.8.5'

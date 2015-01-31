@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   resources :assets, :concerns => :paginatable do
     member do
       get 'print', to: 'assets#print_label'
+      post 'new_tag', to: 'assets#new_tag'
     end
   end
   resources :users, :concerns => :paginatable
   resources :rentals, :concerns => :paginatable
   resources :sessions, only: [:new, :create, :destroy]
   get 'search/index'
-  get 'search/query'
   post 'search/query'
 end

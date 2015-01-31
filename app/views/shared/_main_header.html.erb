@@ -1,5 +1,5 @@
 <div id="header-container">
-  <%= form_tag(controller: "search", action: "query", method: "get") do %>
+  <%= form_tag(controller: "search", action: "query", method: "post") do %>
   <span id="search_field">
     <%= text_field_tag(:search, nil, placeholder: "Search") %>
   </span>
