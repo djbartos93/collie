@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'MuseoSans';
-    src: url('MuseoSans500.ttf') format('truetype'),
-         url('MuseoSans500.eot') format('embedded-opentype'),
-         url('MuseoSans500.woff') format('woff');
+    src: asset-url('MuseoSans500.ttf') format('truetype'),
+         asset-url('MuseoSans500.eot') format('embedded-opentype'),
+         asset-url('MuseoSans500.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MuseoSansItalic';
-    src: url('MuseoSansItalic500.ttf') format('truetype'),
-         url('MuseoSansItalic500.eot') format('embedded-opentype'),
-         url('MuseoSansItalic500.woff') format('woff');
+    src: asset-url('MuseoSansItalic500.ttf') format('truetype'),
+         asset-url('MuseoSansItalic500.eot') format('embedded-opentype'),
+         asset-url('MuseoSansItalic500.woff') format('woff');
 }
