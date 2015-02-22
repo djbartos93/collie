@@ -17,3 +17,5 @@
 
 # Config Files
 /config/collie-config.yml
+
+config/database.yml
