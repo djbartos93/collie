@@ -16,6 +16,18 @@
     <%= f.text_field :asset_name, placeholder: 'Asset Name' %>
   </div>
   <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, placeholder: 'Description', rows: 10, cols: 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location, placeholder: 'Location' %>
+  </div>
+  <div class="field">
+    <%= f.label :model_number %><br>
+    <%= f.text_field :model_number, placeholder: 'Model Number' %>
+  </div>
+  <div class="field">
     <%= f.label :serial_number %><br>
     <%= f.text_field :serial_number, placeholder: 'Serial Number' %>
   </div>

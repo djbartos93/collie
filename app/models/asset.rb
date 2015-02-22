@@ -2,6 +2,7 @@ class Asset < ActiveRecord::Base
   searchkick
   has_and_belongs_to_many :rentals
   has_many :asset_tags
+  belongs_to :manufacturer
 
   after_create :generate_asset_tag
 
