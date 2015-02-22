@@ -9,13 +9,9 @@
     <tr>
       <th>Asset Tag</th>
       <th>Asset Name</th>
-      <th>Serial Number</th>
-      <th>Purchase Date</th>
-      <th>Cost</th>
       <th>Status</th>
       <th>Notes</th>
       <th>Location</th>
-      <th>Model Number</th>
     </tr>
   </thead>
 
@@ -24,13 +20,9 @@
       <tr>
         <td><%= link_to asset.current_tag.tag_number, asset_path(asset) %></td>
         <td><%= link_to asset.asset_name, asset_path(asset) %></td>
-        <td><%= link_to asset.serial_number, asset_path(asset) %></td>
-        <td><%= asset.purchase_date %></td>
-        <td><%= asset.cost %></td>
         <td><%= asset.status %></td>
         <td><%= asset.notes %></td>
         <td><%= asset.location %></td>
-        <td><%= asset.model_number %></td>
       </tr>
     <% end %>
   </tbody>
