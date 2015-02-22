@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150222015528) do
+ActiveRecord::Schema.define(version: 20150222024016) do
 
   create_table "asset_tags", force: true do |t|
     t.string   "tag_number"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20150222015528) do
   add_index "assets", ["manufacturer_id"], name: "index_assets_on_manufacturer_id"
   add_index "assets", ["type_id"], name: "index_assets_on_type_id"
 
-  create_table "assets_rentals", force: true do |t|
+  create_table "assets_rentals", id: false, force: true do |t|
     t.integer  "asset_id"
     t.integer  "rental_id"
     t.datetime "created_at"
@@ -50,6 +50,26 @@ ActiveRecord::Schema.define(version: 20150222015528) do
 
   add_index "assets_rentals", ["asset_id"], name: "index_assets_rentals_on_asset_id"
   add_index "assets_rentals", ["rental_id"], name: "index_assets_rentals_on_rental_id"
+
+  create_table "assets_states", id: false, force: true do |t|
+    t.integer  "asset_id"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assets_states", ["asset_id"], name: "index_assets_states_on_asset_id"
+  add_index "assets_states", ["state_id"], name: "index_assets_states_on_state_id"
+
+  create_table "assets_types", id: false, force: true do |t|
+    t.integer  "asset_id"
+    t.integer  "type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assets_types", ["asset_id"], name: "index_assets_types_on_asset_id"
+  add_index "assets_types", ["type_id"], name: "index_assets_types_on_type_id"
 
   create_table "categories", force: true do |t|
     t.string   "category_name"
@@ -65,13 +85,6 @@ ActiveRecord::Schema.define(version: 20150222015528) do
 
   create_table "manufacturers", force: true do |t|
     t.string   "manufacturer_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "models", force: true do |t|
-    t.string   "model_name"
-    t.string   "model_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

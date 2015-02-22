@@ -1,6 +1,8 @@
 class Asset < ActiveRecord::Base
   searchkick
   has_and_belongs_to_many :rentals
+  has_and_belongs_to_many :states
+  has_and_belongs_to_many :types
   has_many :asset_tags
   belongs_to :manufacturer
 
@@ -26,7 +28,8 @@ class Asset < ActiveRecord::Base
   end
 
   private
-    def generate_asset_tag
-      self.asset_tags.create
-    end
+
+  def generate_asset_tag
+    self.asset_tags.create
+  end
 end
