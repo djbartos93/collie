@@ -21,6 +21,7 @@ gem 'therubyracer',  platforms: :ruby
 
 # Use Fontawesome for icons
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'ionicons-rails', '~> 2.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
