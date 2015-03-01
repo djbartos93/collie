@@ -77,8 +77,6 @@ main {
     display: inline-block;
 
     float: left;
-
-    padding-top: $navbar-height;
   }
 
   #sidebar {
@@ -97,6 +95,8 @@ main {
 
   #main-container {
     margin: 1em;
+
+    padding-top: $navbar-height;
   }
 }
 

@@ -6,6 +6,7 @@ class Asset < ActiveRecord::Base
   belongs_to :manufacturer
   belongs_to :state
 
+  after_commit :reindex_product
   after_create :generate_asset_tag
 
   validates :serial_number, uniqueness: true
@@ -24,12 +25,20 @@ class Asset < ActiveRecord::Base
   end
 
   def search_data
-    attributes.merge asset_tag: current_tag.tag_number
+    search_attributes = attributes
+    search_attributes = search_attributes.merge  asset_tag: current_tag.tag_number
+    search_attributes = search_attributes.merge manufacturer: manufacturer.name if manufacturer
+    search_attributes = search_attributes.merge state: state.name if state
+    search_attributes
   end
 
   private
 
   def generate_asset_tag
     self.asset_tags.create
+  end
+
+  def reindex_product
+    reindex
   end
 end
