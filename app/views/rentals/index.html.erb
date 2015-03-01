@@ -14,11 +14,11 @@
   <tbody>
     <% @rentals.each do |rental| %>
       <tr>
-        <td><%= link_to rental.asset_tag, rental_path(rental) %></td>
-        <td><%= link_to rental.asset_name, rental_path(rental) %></td>
-        <td><%= truncate(rental.event_desription) %></td>
+        <td><%= link_to rental.event_title, rental_path(rental) %></td>
+        <td><%= link_to rental.event_location, rental_path(rental) %></td>
+        <td><%= truncate(rental.event_description) %></td>
         <td><%= rental.event_date %></td>
-        <td><%= rental.setup_help %></td>
+        <td><%= rental.setup_help ? "Yes" : "No" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,0 +1,16 @@
+<%= link_to rental.event_title, rental %>
+
+<p>
+  Location:
+  <%= rental.event_location %>
+</p>
+
+<p>
+  Description:
+  <%= truncate rental.event_description %>
+</p>
+
+<p>
+  Event Date:
+  <%= rental.event_date.strftime("%B %d, %Y") %>
+</p>

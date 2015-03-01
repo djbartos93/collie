@@ -2,15 +2,7 @@
 <ul class="search-results-container">
   <% @records.each do |record| %>
   <li class="search-result">
-    <%= link_to record.class, record %>
-    <br>
-    <ul>
-      <% record.attributes.each do |key, value| %>
-        <% if ! key.include? "id" %>
-        <li><%= key.humanize %>  - <%= value %></li>
-        <% end %>
-      <% end %>
-    </ul>
+    <%= render record %>
   </li>
   <% end.empty? and begin %>
   <li>No Results</li>

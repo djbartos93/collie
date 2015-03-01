@@ -6,32 +6,13 @@
 }
 
 .search-result {
-  background-color: #BBB;
+  background-color: #CCC;
 
   margin: .3em;
 
   padding: 1em;
 
   a {
-    font-size: 1.5em;
-  }
-
-  ul {
-    margin-top: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
-    width: 100%;
-
-    background: #CCC;
-
-    li {
-      padding-right: 1em;
-      padding-left: 1em;
-
-      &:nth-child(odd) {
-        background: #DDD;
-      }
-    }
+    font-size: 1.4em;
   }
 }

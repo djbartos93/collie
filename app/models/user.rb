@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   ROLES = %i(admin manager renter)
   has_secure_password
 
+  has_many :tokens
+
   before_validation :set_role
   before_create :generate_confirm_key
 

@@ -89,6 +89,6 @@ class RentalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rental_params
-      params.require(:asset).permit(:event_title, :event_location, :event_description, :event_date, :setup_help)
+      params.require(:rental).permit(:event_title, :event_location, :event_description, :event_date, :setup_help)
     end
 end

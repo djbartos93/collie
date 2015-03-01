@@ -12,6 +12,7 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require ../../../vendor/assets/javascripts/picker
 #= require_tree ../../../vendor/assets/javascripts/
 #= require turbolinks
 #= require nprogress

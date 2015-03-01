@@ -21,8 +21,8 @@
 </p>
 
 <p>
-  <strong>Setup Help</strong>
-  <%= @rental.setup_help %>
+  <strong>Setup Help:</strong>
+  <%= @rental.setup_help ? "Yes" : "No" %>
 </p>
 
 <%= link_to 'Edit', edit_rental_path(@rental), class: 'btn btn--s btn--gray' %> |
