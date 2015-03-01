@@ -1,10 +1,10 @@
 class Asset < ActiveRecord::Base
   searchkick
   has_and_belongs_to_many :rentals
-  has_and_belongs_to_many :states
   has_and_belongs_to_many :types
   has_many :asset_tags
   belongs_to :manufacturer
+  belongs_to :state
 
   after_create :generate_asset_tag
 

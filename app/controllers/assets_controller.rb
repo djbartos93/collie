@@ -116,6 +116,6 @@ class AssetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def asset_params
-      params.require(:asset).permit(:asset_name, :serial_number, :purchase_date, :cost, :status, :notes, :location, :description, :model_number)
+      params.require(:asset).permit(:asset_name, :serial_number, :purchase_date, :cost, :status, :notes, :location, :description, :model_number, :state_id, :manufacturer_id, :type_ids => [])
     end
 end
