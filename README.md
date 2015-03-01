@@ -18,5 +18,5 @@ Asset / Rental Management
   - [ ] Require manager to signin to complete a rental
   - [ ] lookup rental -> scan equipment -> manager sign off (native app)
 - Misc.
-  - [ ] Add UI to add vendors, types, statuses
+  - [x] Add UI to add vendors, types, statuses
   - [ ] Add a dashboard for managers and admins
