@@ -26,9 +26,10 @@ class Asset < ActiveRecord::Base
 
   def search_data
     search_attributes = attributes
-    search_attributes = search_attributes.merge  asset_tag: current_tag.tag_number
+    search_attributes = search_attributes.merge asset_tag: current_tag.tag_number
     search_attributes = search_attributes.merge manufacturer: manufacturer.name if manufacturer
     search_attributes = search_attributes.merge state: state.name if state
+    search_attributes = search_attributes.merge types: types.to_a if types
     search_attributes
   end
 

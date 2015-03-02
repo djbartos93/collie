@@ -3,24 +3,24 @@
 <h3>Asset States</h3>
 <%= form_for [:settings, @new_state] do |f| %>
   <%= f.text_field :name %>
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", class: 'btn btn--s btn--gray' %>
 <% end %>
 <br>
 <ul>
   <% @states.each do |state| %>
-  <li><%= state.name %> | <%= link_to 'Delete', settings_state_path(state), method: :delete %></li>
+  <li><%= state.name %> <%= link_to '', settings_state_path(state), method: :delete, class: "ion-ios-close-outline" %></li>
   <% end %>
 </ul>
 
 <h3>Asset Types</h3>
 <%= form_for [:settings, @new_type] do |f| %>
   <%= f.text_field :name %>
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", class: 'btn btn--s btn--gray' %>
 <% end %>
 <br>
 <ul>
   <% @types.each do |type| %>
-  <li><%= type.name %> | <%= link_to 'Delete', settings_type_path(type), method: :delete %></li>
+  <li><%= type.name %> <%= link_to '', settings_type_path(type), method: :delete, class: "ion-ios-close-outline" %></li>
   <% end %>
 </ul>
 
@@ -28,11 +28,11 @@
 <h3>Asset Manufacturers</h3>
 <%= form_for [:settings, @new_manufacturer] do |f| %>
   <%= f.text_field :name %>
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", class: 'btn btn--s btn--gray' %>
 <% end %>
 <br>
 <ul>
   <% @manufacturers.each do |manufacturer| %>
-  <li><%= manufacturer.name %> | <%= link_to 'Delete', settings_manufacturer_path(manufacturer), method: :delete %></li>
+  <li><%= manufacturer.name %> <%= link_to '', settings_manufacturer_path(manufacturer), method: :delete, class: "ion-ios-close-outline" %></li>
   <% end %>
 </ul>
