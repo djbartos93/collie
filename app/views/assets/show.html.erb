@@ -50,10 +50,29 @@
   <%= @asset.model_number %>
 </p>
 
+<p>
+  <strong>Asset Type:</strong>
+  <% @asset.types.each do |type|%>
+    <br>- <%= type.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Asset State:</strong>
+  <%= @asset.state.name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @asset.manufacturer.name %>
+</p>
+
 <% if can? :update, @asset %>
 <%= link_to 'Edit', edit_asset_path(@asset), class: 'btn btn--s btn--gray' %> |
 <% end %>
+
 <%= link_to 'Back', assets_path, class: 'btn btn--s btn--gray' %>
-<% if can? :update, @asset %>|
+
+<% if CONFIG[:LABEL_PRINTING][:ENABLED] and can? :update, @asset %>|
 <%= link_to 'Print', print_asset_path(@asset), class: 'btn btn--s btn--gray' %>
 <% end %>

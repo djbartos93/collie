@@ -87,11 +87,17 @@ class AssetsController < ApplicationController
   def print_label
     authorize! :update, @asset
 
-    @asset.current_tag.print_label
-
-    respond_to do |format|
-      format.html { redirect_to @asset, notice: 'Tag queued for printing' }
-      format.json { head :no_content }
+    if CONFIG[:LABEL_PRINTING][:ENABLED]
+      @asset.current_tag.print_label
+      respond_to do |format|
+        format.html { redirect_to @asset, notice: 'Tag queued for printing' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to @asset, notice: 'Tag printing is disabled' }
+        format.json { head :service_unavailable }
+      end
     end
   end
 
