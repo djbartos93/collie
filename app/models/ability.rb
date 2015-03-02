@@ -12,7 +12,7 @@ class Ability
       elsif user.role == "renter"
         can [:show, :edit, :update, :destroy], User, :id => user.id
         can [:show, :create], Rental, :user_id => user.id
-        can :read, Asset
+        can [:index, :show], Asset, types: { id: Settings::RentableAssetType.get.rentable_asset_type }
       end
     else
       can :create, User

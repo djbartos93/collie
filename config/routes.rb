@@ -27,5 +27,12 @@ Rails.application.routes.draw do
     resources :types, only: [:create, :destroy]
     resources :states, only: [:create, :destroy]
     resources :manufacturers, only: [:create, :destroy]
+
+    resources :updates, only: [] do
+      collection do
+        put :rentable_asset_type
+        patch :rentable_asset_type
+      end
+    end
   end
 end

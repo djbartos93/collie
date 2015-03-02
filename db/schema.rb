@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301054435) do
+ActiveRecord::Schema.define(version: 20150302144930) do
 
   create_table "asset_tags", force: true do |t|
     t.string   "tag_number"
@@ -96,6 +96,15 @@ ActiveRecord::Schema.define(version: 20150301054435) do
   end
 
   add_index "rentals", ["user_id"], name: "index_rentals_on_user_id"
+
+  create_table "settings", force: true do |t|
+    t.string  "type",         null: false
+    t.string  "string_value"
+    t.integer "int_value"
+    t.date    "date_value"
+  end
+
+  add_index "settings", ["type"], name: "index_settings_on_type", unique: true
 
   create_table "states", force: true do |t|
     t.string   "name"

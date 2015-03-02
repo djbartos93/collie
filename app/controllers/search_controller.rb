@@ -2,7 +2,7 @@ class SearchController < ApplicationController
   def query
     @records = Asset.search(params[:search], index_name: [Asset.searchkick_index.name, Rental.searchkick_index.name]).results
 
-    logger.debug "Number of records found #{@records.length}"
+    @records.delete_if { |record| cannot? :show, record }
 
     if @records.length == 1
       redirect_to @records.first
@@ -15,4 +15,3 @@ class SearchController < ApplicationController
     end
   end
 end
- 

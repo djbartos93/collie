@@ -1,8 +1,10 @@
 <h1>Listing Assets</h1>
 
+<% if can? :manage, Asset %>
 <p>
   <%= link_to "CSV", assets_path(format: "csv"), class: 'btn btn--s btn--gray', download: '' %>
 </p>
+<% end %>
 
 <table>
   <thead>
@@ -17,13 +19,15 @@
 
   <tbody>
     <% @assets.each do |asset| %>
-      <tr>
-        <td><%= link_to asset.current_tag.tag_number, asset_path(asset) %></td>
-        <td><%= link_to asset.asset_name, asset_path(asset) %></td>
-        <td><%= asset.status %></td>
-        <td><%= asset.notes %></td>
-        <td><%= asset.location %></td>
-      </tr>
+      <% if can? :show, asset %>
+        <tr>
+          <td><%= link_to asset.current_tag.tag_number, asset_path(asset) %></td>
+          <td><%= link_to asset.asset_name, asset_path(asset) %></td>
+          <td><%= asset.status %></td>
+          <td><%= asset.notes %></td>
+          <td><%= asset.location %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

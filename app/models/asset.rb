@@ -11,6 +11,8 @@ class Asset < ActiveRecord::Base
 
   validates :serial_number, uniqueness: true
 
+  scope :rentable, -> { includes(:types).where(types: { id: Settings::RentableAssetType.get.rentable_asset_type }) }
+
   def current_tag
     asset_tags.all.order("created_at DESC").first
   end
