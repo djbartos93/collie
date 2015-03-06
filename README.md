@@ -20,3 +20,5 @@ Asset / Rental Management
 - Misc.
   - [x] Add UI to add vendors, types, statuses
   - [ ] Add a dashboard for managers and admins
+- Eventually
+  - [ ] State history (notes)
