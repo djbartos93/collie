@@ -49,15 +49,15 @@
   </div>
   <div class="field">
     <%= f.label :state %><br>
-    <%= f.collection_select :state_id, State.order name: :asc, :id, :name, {prompt: true} %>
+    <%= f.collection_select :state_id, State.order(name: :asc), :id, :name, {prompt: true} %>
   </div>
   <div class="field">
     <%= f.label :manufacturer %><br>
-    <%= f.collection_select :manufacturer_id, Manufacturer.order name: :asc, :id, :name, {prompt: true} %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.order(name: :asc), :id, :name, {prompt: true} %>
   </div>
   <div class="field">
     <%= f.label :types %><br>
-    <%= f.collection_select :type_ids, Type.order name: :asc, :id, :name, {}, {multiple: true, prompt: true} %>
+    <%= f.collection_select :type_ids, Type.order(name: :asc), :id, :name, {}, {multiple: true, prompt: true} %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn--s btn--gray' %>
