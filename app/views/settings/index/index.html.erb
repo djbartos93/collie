@@ -40,6 +40,6 @@
 <h3>Rentable Asset Type</h3>
 <%= form_for Settings::RentableAssetType.get, :url => rentable_asset_type_settings_updates_path(@rentable_asset_type), :as => :setting do |f| %>
   <%= f.label :type %>
-  <%= f.collection_select :rentable_asset_type, Type.all, :id, :name %>
+  <%= f.collection_select :rentable_asset_type, @types, :id, :name %>
   <%= f.submit "Save", class: 'btn btn--s btn--gray' %>
 <% end %>
