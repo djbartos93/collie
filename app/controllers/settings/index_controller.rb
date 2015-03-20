@@ -6,16 +6,15 @@ class Settings::IndexController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @users }
     end
   end
 
   private
 
   def set_settings
-    @types = Type.all
-    @manufacturers = Manufacturer.all
-    @states = State.all
+    @types = Type.order name: :asc
+    @manufacturers = Manufacturer.order name: :asc
+    @states = State.order name: :asc
   end
 
   def set_new_settings
