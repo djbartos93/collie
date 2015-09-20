@@ -62,7 +62,7 @@ gem 'rack-mini-profiler', '~> 0.9.2'
 gem 'flamegraph', '~> 0.0.5'
 
 # Premailer for email style inlining
-gem 'premailer-rails', '~> 1.7.0'
+gem 'premailer-rails', '~> 1.8.2'
 gem 'nokogiri', '~> 1.6.2.1'
 
 # Pagination

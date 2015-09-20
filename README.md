@@ -10,7 +10,7 @@ Asset / Rental Management
   - [x] CSV dump of asset database
   - [x] Asset tag printing
 - Users
-  - [ ] Confirmation emails
+  - [x] Confirmation emails
   - [x] Add contact info (phone)
 - Rentals
   - [ ] Add approve or deny

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate, only: [:new, :create]
+  skip_before_action :authenticate, only: [:new, :create, :confirm]
 
   # GET /users
   # GET /users.json
@@ -30,9 +30,7 @@ class UsersController < ApplicationController
     @user = User.new
     authorize! :new, User
 
-    if !can? :manage, User
-      render 'new', layout: 'login'
-    end
+    render 'new', layout: 'login' unless can? :manage, User
   end
 
   # GET /users/1/edit
@@ -48,6 +46,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        UserMailer.confirmation(@user.id).deliver
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created }
       else
@@ -68,7 +67,7 @@ class UsersController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :bad_request }
       end
     end
   end
@@ -82,6 +81,24 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }
+    end
+  end
+
+  # POST /users/confirm/key
+  # POST /users/confirm/key.json
+  def confirm
+    @user = User.find_by(confirm_key: params[:key])
+    logger.info @user
+    respond_to do |format|
+      if @user
+        @user.update(confirmed: true, confirm_key: nil)
+        session[:user_id] = @user.id
+        format.html { redirect_to root_url, notice: 'Your email has been confirmed' }
+        format.json { render json: @user, status: :no_content }
+      else
+        format.html { redirect_to root_url }
+        format.json { head :no_content }
+      end
     end
   end
 
