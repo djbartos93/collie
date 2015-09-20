@@ -24,8 +24,12 @@ module Collie
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << Rails.root.join("vendor", "assets", "bower")
 
     # Server sprocket assets at a different url
     config.assets.prefix = "/static/assets"
+
+
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end

@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "no-reply@Collie"
+  default from: 'no-reply@Collie'
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -9,6 +9,6 @@ class UserMailer < ActionMailer::Base
   def confirmation(user_id)
     @user = User.find(user_id)
 
-    mail to: @user.email
+    mail to: @user.email, subject: 'Collie - Please Confirm Your Email'
   end
 end

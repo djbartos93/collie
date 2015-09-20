@@ -12,8 +12,9 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require ../../../vendor/assets/javascripts/picker
-#= require_tree ../../../vendor/assets/javascripts/
+#= require pickadate/lib/picker.js
+#= require pickadate/lib/picker.date.js
+#= require pickadate/lib/picker.time.js
 #= require turbolinks
 #= require nprogress
 #= require nprogress-turbolinks
