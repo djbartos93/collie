@@ -64,7 +64,7 @@
 
 <p>
   <strong>Manufacturer:</strong>
-  <%= @asset.manufacturer.name %>
+  <%= @asset.manufacturer ? @asset.manufacturer.name : 'No Manufacturer' %>
 </p>
 
 <% if can? :update, @asset %>
