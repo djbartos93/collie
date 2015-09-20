@@ -1,5 +1,5 @@
 Please confirm your email address with Collie by clicking
-<%= link_to 'here', controller: 'users', action: 'confirm', key: @user.confirm_key, only_path: false %>.
+<%= link_to 'here', confirm_users_url(@user.confirm_key) %>.
 We just want to make sure you're not a robot.
 
 Thanks!

@@ -88,10 +88,10 @@ class UsersController < ApplicationController
   # POST /users/confirm/key.json
   def confirm
     @user = User.find_by(confirm_key: params[:key])
-    logger.info @user
+
     respond_to do |format|
       if @user
-        @user.update(confirmed: true, confirm_key: nil)
+        @user.update(confirmed: true, confirm_key: '')
         session[:user_id] = @user.id
         format.html { redirect_to root_url, notice: 'Your email has been confirmed' }
         format.json { render json: @user, status: :no_content }

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :users, concerns: :paginatable do
     collection do
-      get 'confirm/:key', to: :confirm
+      get 'confirm/:key', to: :confirm, as: 'confirm'
     end
   end
 
