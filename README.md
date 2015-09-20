@@ -22,3 +22,6 @@ Asset / Rental Management
   - [ ] Add a dashboard for managers and admins
 - Eventually
   - [ ] State history (notes)
+- Polish
+  - [ ] Email Styling
+  - [ ] Email Subjects
