@@ -12,6 +12,18 @@
   <% end %>
 </ul>
 
+<h3>Asset Locations</h3>
+<%= form_for [:settings, @new_location] do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create", class: 'btn btn--s btn--gray' %>
+<% end %>
+<br>
+<ul>
+  <% @locations.each do |location| %>
+  <li><%= location.name %> <%= link_to '', settings_location_path(location), method: :delete, class: "ion-ios-close-outline" %></li>
+  <% end %>
+</ul>
+
 <h3>Asset Types</h3>
 <%= form_for [:settings, @new_type] do |f| %>
   <%= f.text_field :name %>

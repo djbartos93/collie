@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location, placeholder: 'Location' %>
+    <%= f.collection_select :location_id, Location.order(name: :asc), :id, :name, {prompt: true} %>
   </div>
   <div class="field">
     <%= f.label :model_number %><br>
@@ -30,6 +30,10 @@
   <div class="field">
     <%= f.label :serial_number %><br>
     <%= f.text_field :serial_number, placeholder: 'Serial Number' %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br>
+    <%= f.text_field :part_number, placeholder: 'Part Number' %>
   </div>
   <div class="field">
     <%= f.label :purchase_date %><br>

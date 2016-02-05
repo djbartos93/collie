@@ -15,11 +15,13 @@ class Settings::IndexController < ApplicationController
     @types = Type.order name: :asc
     @manufacturers = Manufacturer.order name: :asc
     @states = State.order name: :asc
+    @locations = Location.order name: :asc
   end
 
   def set_new_settings
     @new_type = Type.new
     @new_state = State.new
+    @new_location = Location.new
     @new_manufacturer = Manufacturer.new
   end
 end
