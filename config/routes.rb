@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
     resources :types, only: [:create, :destroy]
     resources :states, only: [:create, :destroy]
+    resources :locations, only: [:create, :destroy]
     resources :manufacturers, only: [:create, :destroy]
 
     resources :updates, only: [] do
