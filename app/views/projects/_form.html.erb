@@ -1,0 +1,28 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this Project from being saved or created:</h2>
+
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :project_name %><br>
+      <%= f.text_field :project_name, placeholder: 'Project Name' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit class: 'btn btn--s btn--gray' %>
+    </div>
+
+<% end %>
+
+Things this page needs:
+<div> new project
+  <br> add jobs to project
+</div>

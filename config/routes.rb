@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   end
 
   resources :rentals, concerns: :paginatable
+  resources :jobs, concerns: :paginatable
+  resources :projects, concerns: :paginatable
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'search/index'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160204235538) do
+ActiveRecord::Schema.define(version: 20160213075836) do
 
   create_table "asset_tags", force: :cascade do |t|
     t.string   "tag_number"
@@ -77,6 +77,19 @@ ActiveRecord::Schema.define(version: 20160204235538) do
     t.datetime "updated_at"
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.string   "item_id"
+    t.string   "box_number"
+    t.string   "wire_number"
+    t.integer  "start_foot"
+    t.integer  "end_foot"
+    t.integer  "pulled_length"
+    t.boolean  "jack_lock"
+    t.integer  "qty_used"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -87,6 +100,17 @@ ActiveRecord::Schema.define(version: 20160204235538) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "project_name"
+    t.string   "account_number"
+    t.boolean  "complete"
+    t.integer  "job_id"
+    t.text     "notes"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "status"
   end
 
   create_table "rentals", force: :cascade do |t|

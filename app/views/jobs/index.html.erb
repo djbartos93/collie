@@ -1,2 +1,7 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Listing Jobs</h1>
+
+Some stuff here
+
+<% if can? :create, Job %>
+<%= link_to 'New Job', new_job_path, class: 'btn btn--s btn--gray' %>
+<% end %>

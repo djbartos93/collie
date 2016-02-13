@@ -1,0 +1,5 @@
+<h1>projects#index</h1>
+<p>Find me in app/views/projects/index.html.erb</p>
+<% if can? :create, Project %>
+<%= link_to 'New Project', new_project_path, class: 'btn btn--s btn--gray' %>
+<% end %>
