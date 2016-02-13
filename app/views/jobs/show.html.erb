@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Progect:</strong>
+  <%= @job.progect %>
+</p>
+
+<p>
+  <strong>Box number:</strong>
+  <%= @job.box_number %>
+</p>
+
+<p>
+  <strong>Wire number:</strong>
+  <%= @job.wire_number %>
+</p>
+
+<p>
+  <strong>Start foot:</strong>
+  <%= @job.start_foot %>
+</p>
+
+<p>
+  <strong>End foot:</strong>
+  <%= @job.end_foot %>
+</p>
+
+<p>
+  <strong>Pulled length:</strong>
+  <%= @job.pulled_length %>
+</p>
+
+<p>
+  <strong>Jack lock:</strong>
+  <%= @job.jack_lock %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @job.item_id %>
+</p>
+
+<p>
+  <strong>Qty used:</strong>
+  <%= @job.qty_used %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

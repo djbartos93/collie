@@ -1,0 +1,53 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :progect %><br>
+    <%= f.text_field :progect %>
+  </div>
+  <div class="field">
+    <%= f.label :box_number %><br>
+    <%= f.text_field :box_number %>
+  </div>
+  <div class="field">
+    <%= f.label :wire_number %><br>
+    <%= f.text_field :wire_number %>
+  </div>
+  <div class="field">
+    <%= f.label :start_foot %><br>
+    <%= f.number_field :start_foot %>
+  </div>
+  <div class="field">
+    <%= f.label :end_foot %><br>
+    <%= f.number_field :end_foot %>
+  </div>
+  <div class="field">
+    <%= f.label :pulled_length %><br>
+    <%= f.number_field :pulled_length %>
+  </div>
+  <div class="field">
+    <%= f.label :jack_lock %><br>
+    <%= f.check_box :jack_lock %>
+  </div>
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :qty_used %><br>
+    <%= f.number_field :qty_used %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
