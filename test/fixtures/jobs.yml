@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: MyString
+  box_number: MyString
+  wire_number: MyString
+  start_foot: 1
+  end_foot: 1
+  pulled_length: 1
+  jack-lock: false
+  qty_used: 1
+
+two:
+  item_id: MyString
+  box_number: MyString
+  wire_number: MyString
+  start_foot: 1
+  end_foot: 1
+  pulled_length: 1
+  jack-lock: false
+  qty_used: 1
