@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160213075836) do
+ActiveRecord::Schema.define(version: 20160213085427) do
 
   create_table "asset_tags", force: :cascade do |t|
     t.string   "tag_number"
@@ -88,6 +88,8 @@ ActiveRecord::Schema.define(version: 20160213075836) do
     t.integer  "qty_used"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "project_id"
+    t.text     "notes"
   end
 
   create_table "locations", force: :cascade do |t|
